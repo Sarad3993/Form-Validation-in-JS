@@ -70,7 +70,7 @@ h2 {
 }
 
 /* if the form submission is successful border will be highlighted as green  */
-/* we overwrite the default form-control class and add sucees and error class in js part */
+/* we overwrite the default form-control class and add success and error class in js part */
 .form-control.success input {
   border-color: var(--success-color);
 }
@@ -94,15 +94,15 @@ h2 {
   visibility: visible;
 }
 
-.form button {
+#btn {
   cursor: pointer;
   border: 2px solid rgb(88, 181, 196);
-  border-radius: 6px;
+  border-radius: 7px;
   color: white;
   background-color: black;
   display: block;
   width: 100%;
   font-size: 16px;
-  padding: 6px 9px;
+  padding: 7px 9px;
   margin-top: 20px;
 }
