@@ -72,6 +72,7 @@ h2{
 }
 
 /* if the form submission is successful border will be highlighted as green  */
+/* we overwrite the default form-control class and add sucees and error class in js part */
 .form-control.success input {
     border-color: var(--success-color);
 }
@@ -90,7 +91,7 @@ h2{
     visibility: hidden;
 }
 
-/* if it has a error then it must be visible  */
+/* error is hidden by default but if form-control class also has a error class then it must be visible which is done in js part  */
 .form-control.error small {
     visibility: visible;
 }
