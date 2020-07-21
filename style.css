@@ -1,6 +1,12 @@
 /* importing font from google fonts  */
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&display=swap');
 
+/* declaring global variables  */
+:root{
+    --success-color:rgba(19, 204, 19, 0.877);
+    --error-color:rgb(231, 28, 28);
+}
+
 * {
     box-sizing: border-box; /* we should do this if we don't want any padding to affect the width of the element */
     margin: 0;
@@ -62,6 +68,42 @@ h2{
 /* to remove default outline of input box and add a separate border color */
 .form-control input:focus {
     outline: none;
-    border-color:rgb(177, 139, 177) ;
+    border-color:rgb(177, 101, 177);
 }
 
+/* if the form submission is successful border will be highlighted as green  */
+.form-control.success input {
+    border-color: var(--success-color);
+}
+
+/* if there is any error ; then border will be highlighted as red */
+.form-control.error input {
+    border-color: var(--error-color);
+}
+
+.form-control small {
+    color: var(--error-color);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    /* initially the error message mut be hidden ; and we need to show them during validation only  */
+    visibility: hidden;
+}
+
+/* if it has a error then it must be visible  */
+.form-control.error small {
+    visibility: visible;
+}
+
+.form button {
+    cursor: pointer;
+    border: 2px solid rgb(88, 181, 196);
+    border-radius: 6px ;
+    color: white;
+    background-color: black;
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    padding: 6px 9px;
+    margin-top: 20px;
+}
